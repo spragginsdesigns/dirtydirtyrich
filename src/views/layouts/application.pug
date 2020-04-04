@@ -1,0 +1,43 @@
+doctype html
+include ../mixins/UIKit/uikit.pug
+html
+  head
+    <meta http-equiv=“Pragma” content=”no-cache”>
+    <meta http-equiv=“Expires” content=”-1″>
+    <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+    meta(content="text/html; charset=UTF-8", http-equiv="Content-Type")
+    meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' viewport-fit='cover')
+    meta(name='description' content='We have been serving the Central Valley community for over a decade, and our commitment to providing the highest quality care shows in every patient we serve. Let us show you what compassionate care truly means.')
+    link(rel="icon" ype="image/png" href="/static/assets/favicon.png")
+    link(rel='stylesheet' href='/css/main.css')
+    title {{.Title}}
+    script(src='/js/main.js')
+  body
+    .uk-offcanvas-content(uk-height-viewport='expand:true')
+      #offcanvas(uk-offcanvas="mode: push")
+        .uk-offcanvas-bar.uk-flex.uk-flex-column.uk-background-primary
+          button.uk-offcanvas-close(type='button' uk-close)
+          ul.uk-nav.uk-nav-primary.uk-nav-center.uk-margin-auto-vertical
+      div#header(uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky")
+        nav.uk-text-bold.uk-navbar-container.uk-height-match(uk-navbar)
+          .uk-navbar-left
+            ul.uk-navbar-nav
+              li(class='uk-hidden@m'): a(href='#offcanvas' uk-toggle uk-icon='icon: menu')
+          .uk-navbar-center
+            div(class='uk-navbar-center-left uk-visible@m')
+              ul.uk-navbar-nav
+                li.uk-parent: a(href='/home-health/services.html') Skincare
+                
+            a.uk-navbar-item.uk-logo(href='/'): p DirtyDirtyRich
+            div(class='uk-navbar-center-right uk-visible@m')
+              ul.uk-navbar-nav
+                li.uk-parent.uk-nav-divider
+                li.uk-parent: a(href='/home-health/contact.html') Brand Story
+                
+                
+      block main
+      
+      footer.uk-container.uk-padding
+        +grid()
+          .uk-width-1-1.uk-text-center
+            p follow islaylife.com

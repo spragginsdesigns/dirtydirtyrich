@@ -1,0 +1,91 @@
+@import 'uikit';
+$color-main:#3cc2f1;
+$color-main-light: lighten($color-main,35%);
+body {
+  background-color: black!important;
+}
+nav {
+  height:80px;
+  background-color: black!important;
+  .uk-navbar-nav > li > a {
+    // color: #7BD2FA;
+    color: white;
+    border-bottom: 4px solid transparent;
+    &:hover{
+      color: $color-main;
+      // text-decoration: underline;
+      border-bottom: 4px solid $color-main;
+    }
+  }
+}
+p {
+  text-align:justify;
+  color: white;
+}
+#steps {
+  background-color:$color-main-light;
+  color:#444;
+  a {
+    background-color:$color-main;
+    border:none;
+    color:white;
+  }
+}
+.primary {
+  background-color:$color-main;
+  color:white;
+}
+.primary-alt {
+  background-color: $color-main-light;
+  color: #444;
+  // margin: 0;
+}
+
+.uk-logo > img {
+  max-height:85%;
+  margin-top:-8%;
+  // &.large {
+  //   max-height:120%;
+  // }
+}
+
+
+#map {
+  min-height:calc(100vh - 80px);
+}
+
+#video {
+  @media screen and (min-width: 800px) {
+      min-height: 50vh; 
+  }
+  img {
+    width:70%;
+  }
+}
+#flash {
+  top:60px
+}
+#offcanvas a {
+  color:white;
+  font-weight:200;
+}
+
+#video {
+  div {
+    img {
+      width: 60%!important;
+    }
+  }
+}
+
+#steps {
+  padding-top: 20px;
+  div {
+    div {
+      p {
+        font-size: 1.3rem;
+        line-height: 1.3;
+      }
+    }
+  }
+}
